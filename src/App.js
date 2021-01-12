@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState} from 'react'
+import { RenderListItems} from './RenderListItems'
 
 function App() {
+  const [currentItem, setCurrentItem] = useState(null);
+  const [selectedItemsList, setSelectedItemsList] = useState([]);
+  
+  const inputHandler = (e)=> {
+    setCurrentItem(e.target.value)
+  }
+  const addItems = ()=> {
+    setSelectedItemsList([...selectedItemsList, { item: currentItem,key:Date.now()}])
+    setCurrentItem('')
+  }
+ 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Wrapper">  
+      <div className="Input-wrapper">
+            <input  value={currentItem} onChange={inputHandler}/>
+          <button onClick={addItems}>Add</button> 
+        </div> 
+          <RenderListItems selectedItemsList={selectedItemsList} setSelectedItemsList={setSelectedItemsList}/>       
+      </div>
+        </header>
     </div>
   );
 }

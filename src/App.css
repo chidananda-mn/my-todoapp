@@ -14,7 +14,6 @@
 }
 
 .App-header {
-	background-color: #282c34;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -28,34 +27,28 @@
 	color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
 .Wrapper {
-	background-color: blue;
-
-	height: 35px;
+	padding: 10px;
+	border-radius: 10%;
+	background: cadetblue;
 }
 .Input-wrapper {
 	display: flex;
 	justify-content: space-between;
-	width: 300px;
-
+	width: 200px;
 	align-items: center;
+	margin: 10px;
 }
 
 .Input-wrapper input {
 	border-radius: 4%;
 	height: 20px;
-	width: 240px;
+	width: 160px;
+	padding: 6px;
 }
 .Input-wrapper button {
-	border-radius: 4%;
-
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
 	padding: 0;
 }

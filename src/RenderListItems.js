@@ -9,6 +9,6 @@ export const RenderListItems = ({ selectedItemsList, setSelectedItemsList})=> {
   }
 
   return (
-    selectedItemsList.map((_each) => <ul key={_each.key} className="List-view"><li>{_each.item}</li><p onClick={() => deleteListItem(_each.key)}>x</p></ul>)
+    selectedItemsList.map((_each) => <div key={_each.key} className="List-view"><p>{_each.item}</p><button onClick={() => deleteListItem(_each.key)}>x</button></div>)
   )
 }

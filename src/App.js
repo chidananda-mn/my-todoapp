@@ -20,7 +20,7 @@ function App() {
       <div className="Wrapper">  
       <div className="Input-wrapper">
             <input  value={currentItem} onChange={inputHandler}/>
-          <button onClick={addItems}>Add</button> 
+          <button onClick={addItems}>+</button> 
         </div> 
           <RenderListItems selectedItemsList={selectedItemsList} setSelectedItemsList={setSelectedItemsList}/>       
       </div>
